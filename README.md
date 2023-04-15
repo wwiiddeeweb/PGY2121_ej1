@@ -13,3 +13,9 @@ ej:
 _'[@skravetz][menu header] subo primera versión del menu header'_
 
 _'[@mbugueno][footer] arreglo estilos del footer'_
+
+### División de trabajo
+
+- [@ponytakxn] header
+- [@mnzbl] footer
+- [@skravetz] estructura contenedores responsive, hero, botones, integración bootstrap.
