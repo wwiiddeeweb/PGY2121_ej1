@@ -10,5 +10,6 @@
 [@usuario][feature] mensaje descriptivo
 
 ej:
-'[@skravetz][menu header] subo primera versión del menu header'
-'[@mbugueno][footer] arreglo estilos del footer'
+_'[@skravetz][menu header] subo primera versión del menu header'_
+
+_'[@mbugueno][footer] arreglo estilos del footer'_
