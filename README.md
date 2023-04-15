@@ -5,3 +5,10 @@
 ### Integrantes: Juan Valdés, Matías Bugueño, Sebastián Kravetz
 
 - referente diseño: https://bacca.online/
+
+### Formato de commits
+[@usuario][feature] mensaje descriptivo
+
+ej:
+'[@skravetz][menu header] subo primera versión del menu header'
+'[@mbugueno][footer] arreglo estilos del footer'
