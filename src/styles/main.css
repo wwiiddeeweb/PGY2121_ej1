@@ -10,8 +10,17 @@
   --light-gray: #CDDCE0;
 }
 
+header {
+  position: fixed;
+  width: 100%;
+}
+
+#navbarNav {
+  justify-content: right;
+}
+
 .navbar {
-  padding: 10px 30px 0px 30px !important;
+  padding: 12px 30px 0px 30px !important;
 }
 
 .navbar-dark {
@@ -19,7 +28,7 @@
 }
 
 .navbar-nav {
-  margin-top: 18px;
+  margin-top: 19px;
   font-weight: 700;
 }
 
