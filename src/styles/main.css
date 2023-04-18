@@ -111,20 +111,18 @@ header {
 
 :root:has(.show) > body header nav button span:nth-child(1) {
   display: none;
-  transition: display 3s ease-out;
 }
 
 :root:has(.show) > body header nav button span:nth-child(2) {
   display: block;
-  transition: display 3s ease-in;
 }
 
 :root:has(.show) > body {
   background-color: var(--dark-orange) !important;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in;
 }
 
 body {
-  background-color: white;
+  background-color: var(--aqua-blue) !important;
   font-family: 'Sofia Sans', sans-serif;
 }
