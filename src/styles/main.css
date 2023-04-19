@@ -29,6 +29,7 @@ header {
   margin: 0;
   position: fixed;
   width: 100%;
+  z-index: 9999;
 }
 
 #navbarNav {
@@ -155,6 +156,14 @@ header {
   height: 500px;
 }
 
+.sections .section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 24px 18px;
+}
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -172,4 +181,16 @@ header {
   bottom: 30px;
   width: 100%;
   margin: auto;
+}
+
+#funciones {
+  height: 400px;
+  width: 100%;
+  background-color: var(--dark-orange);
+}
+
+#productos {
+  width: 100%;
+  background-color: var(--mid-blue);
+  height: 400px;
 }
