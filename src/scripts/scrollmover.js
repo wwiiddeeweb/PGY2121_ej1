@@ -1,5 +1,7 @@
 const arrowScrollIcon = document.getElementById("scrollDown");
 
-arrowScrollIcon;
+/* setInterval(() => {
+  arrowScrollIcon.style.transform = "translateY(10px)";
+}, 2000); */
 
 console.log(arrowScrollIcon);
