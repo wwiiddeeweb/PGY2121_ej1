@@ -183,6 +183,53 @@ header {
   margin: auto;
 }
 
+.sub-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-hero .sub-hero-container {
+  width: 60%;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+}
+
+.sub-hero .sub-hero-container>img {
+  display: block;
+}
+
+.sub-hero .sub-hero-container>h2 {
+  font-weight: 800;
+  font-size: 2.6rem;
+}
+
+.btn-sub-hero {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 1s;
+}
+
+.btn-sub-hero-icon--eye {
+  transition: all 1s;
+}
+
+.btn-sub-hero:hover {
+  mix-blend-mode: screen;
+}
+
+.btn-sub-hero:hover>.btn-sub-hero-icon--eye {
+  mix-blend-mode: difference;
+}
+
+
+
 #funciones {
   height: 400px;
   width: 100%;
