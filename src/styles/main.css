@@ -194,3 +194,17 @@ header {
   background-color: var(--mid-blue);
   height: 400px;
 }
+
+footer{
+  background-color: var(--light-gray);
+  justify-content:space-around;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.container-body{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
