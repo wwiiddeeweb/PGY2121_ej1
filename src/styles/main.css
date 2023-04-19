@@ -248,10 +248,19 @@ footer{
   position: relative;
   bottom: 0;
   width: 100%;
+  padding: 60px 0px 30px;
 }
 
 .container-body{
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+input {
+  height: 60px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 2px solid var(--dark-gray);
+  text-align: center;
 }
