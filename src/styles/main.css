@@ -356,3 +356,15 @@ input {
 .footer-container {
   color: var(--dark-gray);
 }
+
+.line-stand {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: stand-appear 4.5s ease forwards;
+}
+
+@keyframes stand-appear {
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
