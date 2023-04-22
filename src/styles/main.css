@@ -254,6 +254,32 @@ footer{
   flex-direction: column;
 }
 
+.container-body-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-footer {
+  text-decoration: none;
+}
+
+.link-footer:hover {
+  text-decoration: none;
+}
+
+.link-footer:after {
+  display: block;
+  content: "";
+  margin-top: 4px;
+  border-bottom: solid 1px var(--dark-gray);
+  transform: scaleX(0);
+}
+
+.link-footer:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
 input {
   height: 60px;
   background-color: transparent;
@@ -266,6 +292,15 @@ input {
 
 .footer-container {
   color: var(--dark-gray);
+}
+
+.cart-modal {
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  right: 0;
+  background-color: white;
+  z-index: 2;
 }
 
 .line-stand {
