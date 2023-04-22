@@ -246,6 +246,12 @@ footer{
   bottom: 0;
   width: 100%;
   padding: 60px 0px 30px;
+  font: inherit;
+}
+
+.footer a{
+  color: var(--dark-gray);
+  text-decoration: none;
 }
 
 .container-body{
@@ -266,4 +272,26 @@ input {
 
 .footer-container {
   color: var(--dark-gray);
+}
+
+.logo-bacca{
+  width: 70px;
+  height: 15px;
+}
+
+.follow-list{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.follow-list a:hover{
+  transform: translateY(-2px);
+  transition: transform 0.5s ease-in-out;
+}
+
+.follow-list a{
+  transform: translateY(2px);
+  transition: transform 0.5s ease-in-out;
 }
