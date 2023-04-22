@@ -156,12 +156,75 @@ header {
   height: 500px;
 }
 
+.heading-grande {
+  font-size: 52px;
+  font-weight: 700;
+}
+
 .sections .section {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 24px 18px;
+}
+
+.section-funcionalidades {
+  width: 100%;
+  background-image: url(../../assets/imgs/material.jpg);
+}
+
+
+
+.section-productos {
+  width: 100%;
+  background-color: var(--mid-blue);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+}
+
+.section-productos-grid {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.producto-container-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+
+.producto-container-producto img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.producto-container-producto img:hover {
+  width: 90%;
+}
+
+.producto-detalle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.producto-detalle img {
+  margin-left: 10px;
+  display: inline;
+  width: 15px;
 }
 
 .hero {
@@ -181,6 +244,32 @@ header {
   bottom: 30px;
   width: 100%;
   margin: auto;
+}
+
+.scrolldown img {
+  animation: scrolldown 0.8s linear infinite;
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .sub-hero {
@@ -239,16 +328,16 @@ header {
   height: 400px;
 }
 
-footer{
+footer {
   background-color: var(--light-gray);
-  justify-content:space-around;
+  justify-content: space-around;
   position: relative;
   bottom: 0;
   width: 100%;
   padding: 60px 0px 30px;
 }
 
-.container-body{
+.container-body {
   text-align: center;
   display: flex;
   flex-direction: column;
