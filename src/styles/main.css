@@ -36,6 +36,10 @@ header {
   justify-content: right;
 }
 
+.navbar-blur-bg {
+  backdrop-filter: blur(16px);
+}
+
 .navbar {
   padding: 12px 30px 0px 15px !important;
 }
@@ -139,6 +143,19 @@ header {
   transition: background-color 0.3s ease-in;
 }
 
+.main-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.main-wrapper {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
 
 .main {
   position: absolute;
@@ -232,9 +249,10 @@ header {
   height: 100vh;
   background-image: url(../../assets/imgs/hero02.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .hero .scrolldown {
@@ -249,6 +267,7 @@ header {
 .scrolldown img {
   animation: scrolldown 0.8s linear infinite;
 }
+
 
 @keyframes scrolldown {
   0% {
@@ -293,20 +312,17 @@ header {
   display: block;
 }
 
-.sub-hero .sub-hero-container>h2 {
-  font-weight: 800;
-  font-size: 2.6rem;
-}
-
 .btn-sub-hero {
   color: var(--main-white);
   padding: 12px;
   font-size: 1.2rem;
   font-weight: 700;
   transition: all 1s;
+  text-align: center;
 }
 
 .btn-sub-hero-icon--eye {
+  display: inline;
   transition: all 1s;
 }
 
@@ -338,7 +354,7 @@ footer {
   font: inherit;
 }
 
-.footer a{
+.footer a {
   color: var(--dark-gray);
   text-decoration: none;
 }
@@ -355,14 +371,20 @@ footer {
 }
 
 .link-footer {
+  padding-left: calc(((100vw/3)/3));
+  padding-right: calc(((100vw/3)/3));
+  display: block;
   text-decoration: none;
+  text-overflow: clip;
+  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .link-footer:hover {
   text-decoration: none;
 }
 
-.link-footer:after {
+.link-footer::after {
   display: block;
   content: "";
   margin-top: 4px;
@@ -370,7 +392,7 @@ footer {
   transform: scaleX(0);
 }
 
-.link-footer:hover:after {
+.link-footer:hover::after {
   transform: scaleX(1);
   transition: transform 0.3s ease-in-out;
 }
@@ -389,24 +411,24 @@ input {
   color: var(--dark-gray);
 }
 
-.logo-bacca{
+.logo-bacca {
   width: 70px;
   height: 15px;
 }
 
-.follow-list{
+.follow-list {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
-.follow-list a:hover{
+.follow-list a:hover {
   transform: translateY(-2px);
   transition: transform 0.5s ease-in-out;
 }
 
-.follow-list a{
+.follow-list a {
   transform: translateY(2px);
   transition: transform 0.5s ease-in-out;
 }
@@ -420,14 +442,65 @@ input {
   z-index: 2;
 }
 
-.line-stand {
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  animation: stand-appear 4.5s ease forwards;
+
+
+/* ------------------------------------------- */
+/* MEDIA QUERIES PARA RESPONSIVE PERSONALIZADO */
+/* ------------------------------------------- */
+
+/* dispositivos extra pequeños (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .link-footer {
+    padding-left: calc(((100vw)/3));
+    padding-right: calc(((100vw)/3));
+  }
+
 }
 
-@keyframes stand-appear {
-  100%{
-    stroke-dashoffset: 0;
+/* dispositivos muy pequeños (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .hero {
+    height: 50vh;
+  }
+   .link-footer {
+    padding-left: calc(((100vw/6)/4));
+    padding-right: calc(((100vw/6)/4));
+  }
+}
+
+/* dispositivos medianos (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+   .link-footer {
+    padding-left: calc(((100vw/6)/5));
+    padding-right: calc(((100vw/6)/5));
+  }
+}
+
+/* dispositivos grandes (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero {
+    height: 100vh;
+  }
+  .link-footer {
+    padding-left: calc(((100vw/3)/4));
+    padding-right: calc(((100vw/3)/4));
+  }
+}
+
+/* dispositivos muy grandes (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .hero {
+    height: 100vh;
+  }
+  .link-footer {
+    padding-left: calc(((100vw/3)/3.4));
+    padding-right: calc(((100vw/3)/3.4));
   }
 }
