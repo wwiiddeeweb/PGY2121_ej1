@@ -43,22 +43,28 @@
 
             <li class="nav-item" role="button">
               <div class="nav-link">
-                <span data-currency="CLP Peso" data-symbol="$" href="#">CLP $</span>
-                <img src="../assets/svgs/icons/currency_symbol.svg" alt="Moneda">
+                <div class="nav-icons-container">
+                  <span data-currency="CLP Peso" data-symbol="$" href="#">CLP $</span>
+                  <img src="../assets/svgs/icons/currency_symbol.svg" alt="Moneda">
+                </div>
               </div>
             </li>
 
             <li class="nav-item">
               <div class="nav-link">
-                <a data-toggle="collapse" href="#carritoCompras" role="button" aria-expanded="false" aria-controls="carritoCompras">Carrito (0)</a>
-                <img src="../assets/svgs/icons/cart_icon.svg" alt="Carrito">
+                <div class="nav-icons-container">
+                  <button data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">Carrito (3)</button>
+                  <img src="../assets/svgs/icons/cart_icon.svg" alt="Carrito">
+                </div>
               </div>
             </li>
 
             <li class="nav-item">
               <div class="nav-link">
-                <a href="#">Iniciar Sesión</a>
-                <img src="../assets/svgs/icons/user_icon.svg" alt="Iniciar Sesión">
+                <div class="nav-icons-container">
+                  <a href="#">Iniciar Sesión</a>
+                  <img src="../assets/svgs/icons/user_icon.svg" alt="Iniciar Sesión">
+                </div>
               </div>
             </li>
 
@@ -99,27 +105,31 @@
         <div class="section-productos-grid">
           <h1 class="text-light heading-grande mb-5">Nuestros Productos</h1>
           <div class="container d-flex flex-column justify-content-center align-items-center">
-            <div class="row mb-4">
+            <div class="row mb-4 dos-productos-container">
               <div class="col">
                 <div class="producto-container-producto">
-                  <img src="../assets/imgs/products/live.png" alt="">
-                  <h3 class="text-light">Producto $16000</h3>
-                  <div class="producto-detalle">
-                    <div class="row w-100 justify-content-center align-items-center">
-                      <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                      <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                  <div class="producto-overlay">
+                    <img src="../assets/imgs/products/live.png" alt="">
+                    <h3 class="text-light">Producto $16000</h3>
+                    <div class="producto-detalle">
+                      <div class="row w-100 justify-content-center align-items-center">
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="producto-container-producto">
-                  <img src="../assets/imgs/products/studio.png" alt="">
-                  <h3 class="text-light">Producto $16000</h3>
-                  <div class="producto-detalle">
-                    <div class="row w-100 justify-content-center align-items-center">
-                      <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                      <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                  <div class="producto-overlay">
+                    <img src="../assets/imgs/products/studio.png" alt="">
+                    <h3 class="text-light">Producto $16000</h3>
+                    <div class="producto-detalle">
+                      <div class="row w-100 justify-content-center align-items-center">
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,12 +138,14 @@
             <div class="row">
               <div class="col">
                 <div class="producto-container-producto">
-                  <img src="../assets/imgs/products/desktop.png" alt="">
-                  <h3 class="text-light">Producto $16000</h3>
-                  <div class="producto-detalle">
-                    <div class="row w-100 justify-content-center align-items-center">
-                      <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                      <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                  <div class="producto-overlay">
+                    <img src="../assets/imgs/products/desktop.png" alt="">
+                    <h3 class="text-light">Producto $16000</h3>
+                    <div class="producto-detalle">
+                      <div class="row w-100 justify-content-center align-items-center">
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -211,8 +223,88 @@
         </div>
       </footer>
       <!--FIN FOOTER-->
+      
+      <!--CARRITO-->
+      <div class="collapse show-cart" id="carritoCompras">
+        <h6 class="titulo-carrito">TU COMPRA</h6>
 
+        <button class="close-btn" data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">X</button>
+        
+        <div class="carrito-container">
+          <div class="producto-carrito">
+            <img src="../assets/imgs/products/desktop.png" alt="img-producto">
 
+            <div class="detalle-compra">
+              <div class="detalle-producto">
+                <div>
+                  <h5>Laptop riser</h5>
+                  <p>Native wood collection</p>
+                </div>
+                <div class="precio-producto">
+                  <h6>$16000</h6>
+                </div>
+              </div>
+
+              <div class="selector-producto">
+                <div>
+                  <button>-</button>
+                  <span>1</span>
+                  <button>+</button>
+                </div>
+                <button class="borrar-btn">Eliminar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="producto-carrito">
+            <div class="img-container">
+              <img src="../assets/imgs/products/live.png" alt="img-producto">
+            </div>
+
+            <div class="detalle-compra">
+              <div class="detalle-producto">
+                <div>
+                  <h5>Synth base</h5>
+                  <p>Native wood collection</p>
+                </div>
+                <div class="precio-producto">
+                  <h6>$32000</h6>
+                </div>
+              </div>
+
+              <div class="selector-producto">
+                <div>
+                  <button>-</button>
+                  <span>2</span>
+                  <button>+</button>
+                </div>
+                <button class="borrar-btn">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-container">
+          <div class="checkout">
+            <div class="detalle-pago envio">
+              <h4>Envío</h4>
+              <h5>$500</h5>
+            </div>
+            <p class="despacho">Despacho entre 2-5 días hábiles</p>
+            <div class="detalle-pago total-compra">
+              <h4>Total</h4>
+              <h5>$48500</h5>
+            </div>
+            <div class="checkout-btn-container">
+              <button class="checkout-btn">
+                <span>CHECKOUT</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!--FIN CARRITO-->
 
 
 
