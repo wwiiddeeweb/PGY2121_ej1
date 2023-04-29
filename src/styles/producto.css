@@ -19,6 +19,8 @@
 
 .overlay{
   display: flex;
+  font-weight: 1000;
+  margin-bottom: 8px; 
 }
 
 .cantidad-container{
@@ -35,9 +37,33 @@
 }
 
 .carousel-control-prev{
-  z-index: 99;
+  z-index: 0;
 }
 
 .carousel-control-next{
-  z-index: 99;
+  z-index: 0;
+}
+
+.boton-compra{
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  opacity: .5; 
+}
+
+.info-container{
+  gap: 10px;
+}
+
+.info{
+  gap: 10px;
+}
+
+.shipping{
+  gap: 10px;
+}
+
+h1{
+  z-index: 5;
 }
