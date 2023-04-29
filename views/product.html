@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="stylesheet" href="../src/styles/producto.css">
 </head>
 
 <body class="container-fluid p-0">
@@ -25,7 +26,7 @@
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          <span class=navbar-toggler-icon-close">X</span>
+          <span class="navbar-toggler-icon-close">X</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav active ml-auto">
@@ -77,87 +78,11 @@
     <!--  MAIN SITE WRAPPER -->
     <div class="main">
 
+      <!-- PRODUCTO -->
+      <div class="producto-detalle-container">
 
-
-      <!--  HERO -->
-      <div class="hero">
-        <div class="scrolldown" id="scrollDown">
-          <img src=" ../assets/svgs/icons/arrow_down.svg" class="scrolldown-icon" alt="">
-        </div>
       </div>
-      <div class="sub-hero">
-        <div class="sub-hero-container">
-          <object id="dynamic-svg" type="image/svg+xml" data="../assets/svgs/producto_animado.svg"></object>
-          <h2 class="text-light text-wrap">Productos de calidad, hechos a manos por luthiers nacionales.</h2>
-          <blockquote class="blockquote">
-            <p class="mb-0">"Hechos para <mark>toda la vida.</mark>"</p>
-            <div class="blockquote-footer">Rolling Stones Magazine.</div>
-          </blockquote>
-          <button class="btn btn-outline-light btn-sub-hero">Ver todos nuestros productos <img src="../assets/svgs/icons/eye_icon.svg" class="btn-sub-hero-icon--eye" /></button>
-        </div>
-      </div>
-      <!--  END HERO -->
-
-
-      <!--  SECCIÓN: PRODUCTOS -->
-      <section class="section-productos">
-
-        <div class="section-productos-grid">
-          <h1 class="text-light heading-grande mb-5">Nuestros Productos</h1>
-          <div class="container d-flex flex-column justify-content-center align-items-center">
-            <div class="row mb-4 dos-productos-container">
-              <div class="col">
-                <div class="producto-container-producto">
-                  <div class="producto-overlay">
-                    <img src="../assets/imgs/products/live.png" alt="">
-                    <h3 class="text-light">Producto $16000</h3>
-                    <div class="producto-detalle">
-                      <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="producto-container-producto">
-                  <div class="producto-overlay">
-                    <img src="../assets/imgs/products/studio.png" alt="">
-                    <h3 class="text-light">Producto $16000</h3>
-                    <div class="producto-detalle">
-                      <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="producto-container-producto">
-                  <div class="producto-overlay">
-                    <img src="../assets/imgs/products/desktop.png" alt="">
-                    <h3 class="text-light">Producto $16000</h3>
-                    <div class="producto-detalle">
-                      <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--  FIN SECCIÓN: PRODUCTOS -->
-
-
-
+      <!-- FIN PRODUCTO -->
 
       <!--FOOTER -->
       <footer class="footer">
@@ -223,7 +148,7 @@
         </div>
       </footer>
       <!--FIN FOOTER-->
-      
+
       <!--CARRITO-->
       <div class="collapse show-cart" id="carritoCompras">
         <h6 class="titulo-carrito">TU COMPRA</h6>
@@ -307,7 +232,6 @@
       <!--FIN CARRITO-->
 
 
-
     </div>
     <!--  END MAIN SITE WRAPPER -->
 
@@ -317,20 +241,4 @@
   </div>
   <!-- END MAIN ROW - MAIN WRAPPER -->
 
-
-
-  <!-- UTILITARY SCRIPT FOR DYNAMIC SVG, ON LOADED DOM -->
-  <script>
-    const svgHolder = document.querySelector('object#dynamic-svg');
-    svgHolder.onload = () => {
-      const svgDocument = svgHolder.contentDocument;
-      const style = svgDocument.createElementNS("http://www.w3.org/2000/svg", "style");
-      style.textContent = '@import url("producto_animado.css");';
-      const svgElem = svgDocument.querySelector('svg');
-      svgElem.insertBefore(style, svgElem.firstChild);
-    };
-  </script>
-  <!-- UTILITARY SCRIPT FOR DYNAMIC SVG, ON LOADED DOM -->
 </body>
-
-</html>
