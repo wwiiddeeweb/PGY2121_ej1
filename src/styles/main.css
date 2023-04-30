@@ -7,6 +7,7 @@
   --aqua-blue: #7ab8b8;
   --dark-orange: #de693e;
   --mid-blue: #6aaebf;
+  --mid-blue-hover: #85c6d6;
   --light-gray: #cddce0;
 }
 
@@ -194,7 +195,7 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
 }
 
 .heading-grande {
-  font-size: 52px;
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -419,6 +420,13 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   mix-blend-mode: difference;
 }
 
+.btn-contacto {
+  background-color: var(--mid-blue);
+}
+
+.btn-contacto:hover {
+  background-color: var(--mid-blue-hover);
+}
 
 #funciones {
   height: 400px;
@@ -440,6 +448,7 @@ footer {
   width: 100%;
   padding: 60px 0px 30px;
   font: inherit;
+
 }
 
 .footer a {
@@ -447,9 +456,13 @@ footer {
   text-decoration: none;
 }
 
+.footer-input-email {
+  height: 2.8rem;
+}
+
 .container-body {
   text-align: center;
-  display: flex;
+  display: inline;
   flex-direction: column;
 }
 
@@ -708,6 +721,10 @@ input {
   opacity: 1;
 }
 
+.form-check-input {
+  margin-top: -1rem !important;
+}
+
 
 
 /* ------------------------------------------- */
@@ -725,6 +742,23 @@ input {
     padding-right: calc(((100vw)/3));
   }
 
+  .btn-sub-hero {
+    color: var(--main-white);
+    padding: 12px;
+    font-size: .8rem;
+    font-weight: 700;
+    transition: all 1s;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .heading-grande {
+    font-size: 2rem;
+    font-weight: 700;
+  }
 }
 
 /* dispositivos muy pequeños (landscape phones, 576px and up) */
@@ -736,6 +770,24 @@ input {
   .link-footer {
     padding-left: calc(((100vw/6)/4));
     padding-right: calc(((100vw/6)/4));
+  }
+
+  .btn-sub-hero {
+    color: var(--main-white);
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 1s;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .heading-grande {
+    font-size: 2.5rem;
+    font-weight: 700;
   }
 }
 
@@ -749,6 +801,11 @@ input {
     padding-left: calc(((100vw/6)/5));
     padding-right: calc(((100vw/6)/5));
   }
+
+  .heading-grande {
+    font-size: 3rem;
+    font-weight: 700;
+  }
 }
 
 /* dispositivos grandes (desktops, 992px and up) */
@@ -760,6 +817,11 @@ input {
   .link-footer {
     padding-left: calc(((100vw/3)/4));
     padding-right: calc(((100vw/3)/4));
+  }
+
+  .heading-grande {
+    font-size: 3.5rem;
+    font-weight: 700;
   }
 }
 
