@@ -23,7 +23,7 @@
       <div class="info-producto-container">
         <div class="info-producto">
           <div class="nom-precio-producto">
-            <h2>Synth base</h2>
+            <h2>Stand Genova</h2>
             <h3>$16000</h3>
           </div>
           <div class="cantidad-container overlay">
@@ -34,18 +34,10 @@
               <span>-</span>
             </div>
           </div>
-          <button class="boton-compra">Fuera de stock</button>
-          <div class="info-container overlay">
-            <div class="info overlay">
-              <h4>Info</h4>
-              <span><img src="../../assets/imgs/carousel/down-arrow-5.png" width="18px" height="10px" alt=""></span>
-            </div>
-            <div class="shipping overlay">
-              <h4>Envío</h4>
-              <span><img src="../../assets/imgs/carousel/down-arrow-5.png" width="18px" height="10px" alt=""></span>
-            </div>
-          </div>
-          <div class="rs-container overlay">
+          <button class="boton-compra">
+            <span>Añadir al carrito</span>
+          </button>
+          <div class="rs-container">
             <div class="rs-list">
               <a href="https://www.pinterest.cl/">
                 <img src="../../assets/imgs/logo-pinterest.png" alt="imagen-pinterest" width="20" height="19">
@@ -63,19 +55,19 @@
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/imgs/carousel/producto1.jpg" class="d-block w-100" alt="...">
+            <img src="../../assets/imgs/carousel/genova1.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/imgs/carousel/producto2.jpg" class="d-block w-100" alt="...">
+            <img src="../../assets/imgs/carousel/genova2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/imgs/carousel/producto3.jpg" class="d-block w-100" alt="...">
+            <img src="../../assets/imgs/carousel/genova3.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/imgs/carousel/producto4.jpg" class="d-block w-100" alt="...">
+            <img src="../../assets/imgs/carousel/genova4.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../../assets/imgs/carousel/producto5.jpg" class="d-block w-100" alt="...">
+            <img src="../../assets/imgs/carousel/genova5.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
@@ -101,30 +93,34 @@
           <div class="row mb-4 dos-productos-container">
             <div class="col">
               <div class="producto-container-producto">
-                <div class="producto-overlay">
-                  <img src="../../assets/imgs/products/desktop.png" alt="">
-                  <h3 class="text-light">Producto $16000</h3>
-                  <div class="producto-detalle">
-                    <div class="row w-100 justify-content-center align-items-center">
-                      <div class="col d-flex justify-content-center text-light">Ver más <img src="../../assets/svgs/icons/eye_icon.svg" /></div>
-                      <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../../assets/svgs/icons/cart_icon.svg" /></div>
+                <a href="../views/praga.html" class="text-decoration-none">
+                  <div class="producto-overlay">
+                    <img src="../../assets/imgs/products/desktop.png" alt="">
+                    <h3 class="text-light">Stand Praga $16000</h3>
+                    <div class="producto-detalle">
+                      <div class="row w-100 justify-content-center align-items-center">
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../../assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../../assets/svgs/icons/cart_icon.svg" /></div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             <div class="col">
               <div class="producto-container-producto">
-                <div class="producto-overlay">
-                  <img src="../../assets/imgs/products/studio.png" alt="">
-                  <h3 class="text-light">Producto $16000</h3>
-                  <div class="producto-detalle">
-                    <div class="row w-100 justify-content-center align-items-center">
-                      <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                      <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                <a href="../views/berlin.html" class="text-decoration-none">
+                  <div class="producto-overlay">
+                    <img src="../../assets/imgs/products/live.png" alt="">
+                    <h3 class="text-light">Stand Berlín $16000</h3>
+                    <div class="producto-detalle">
+                      <div class="row w-100 justify-content-center align-items-center">
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../../assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../../assets/svgs/icons/cart_icon.svg" /></div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -201,7 +197,7 @@
     <!-- NAVBAR -->
     <header class="navbar-blur-bg">
       <nav class="navbar navbar-expand-lg navbar-dark bg-none">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="../index.html">
           <img src="../../assets/svgs/logo_bacca.svg" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -211,7 +207,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav active ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Inicio</a>
+              <a class="nav-link" href="../index.html">Inicio</a>
             </li>
 
             <li class="nav-item">
