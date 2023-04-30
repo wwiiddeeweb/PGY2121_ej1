@@ -45,7 +45,7 @@
               <div class="nav-link">
                 <div class="nav-icons-container">
                   <span data-currency="CLP Peso" data-symbol="$" href="#">CLP $</span>
-                  <img src="../assets/svgs/icons/currency_symbol.svg" alt="Moneda">
+                  <img src="../assets/svgs/icons/currency_symbol.svg" alt="Moneda" class="nav-link-carrito">
                 </div>
               </div>
             </li>
@@ -53,8 +53,10 @@
             <li class="nav-item">
               <div class="nav-link">
                 <div class="nav-icons-container">
-                  <button data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">Carrito (3)</button>
-                  <img src="../assets/svgs/icons/cart_icon.svg" alt="Carrito">
+                  <button data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">Carrito (2)
+                    <img src="../assets/svgs/icons/cart_icon.svg" alt="Carrito" class="nav-link-carrito">
+                  </button>
+
                 </div>
               </div>
             </li>
@@ -127,7 +129,7 @@
                   <a style="text-decoration: none;" href="./views/genova.html">
                     <div class="producto-overlay">
                       <img src="../assets/imgs/products/studio.png" alt="">
-                      <h3 class="text-light">Producto $16000</h3>
+                      <h3 class="text-light">Stand Genova $16000</h3>
                       <div class="producto-detalle">
                         <div class="row w-100 justify-content-center align-items-center">
                           <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
@@ -145,7 +147,7 @@
                   <a style="text-decoration: none;" href="./views/praga.html">
                     <div class="producto-overlay">
                       <img src="../assets/imgs/products/desktop.png" alt="">
-                      <h3 class="text-light">Producto $16000</h3>
+                      <h3 class="text-light">Stand Praga $16000</h3>
                       <div class="producto-detalle">
                         <div class="row w-100 justify-content-center align-items-center">
                           <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
@@ -163,76 +165,89 @@
       <!--  FIN SECCIÓN: PRODUCTOS -->
 
 
-      <!--  SECCIÓN: PRODUCTOS -->
+      <!--  SECCIÓN: CONTACTO -->
       <section class="section-contacto">
 
         <div class="section-productos-grid">
           <h1 class="text-light heading-grande mb-5">Contáctanos!</h1>
           <div class="container d-flex flex-column justify-content-center align-items-center">
 
-            <form>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault01">Primer Nombre</label>
-                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault02">Apellido</label>
-                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="validationDefault03">Ciudad</label>
-                  <input type="text" class="form-control" id="validationDefault03" required>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <label for="validationDefault04">State</label>
-                  <select class="custom-select" id="validationDefault04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <label for="validationDefault05">Zip</label>
-                  <input type="text" class="form-control" id="validationDefault05" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                  <label class="form-check-label" for="invalidCheck2">
-                    Agree to terms and conditions
-                  </label>
-                </div>
-              </div>
-              <button class="btn btn-primary" type="submit">Submit form</button>
-            </form>
+            <div class="row">
 
+
+              <form>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Primer Nombre</label>
+                    <input type="text" class="form-control" id="validationDefault01" value="Juanita" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationDefault02">Apellido</label>
+                    <input type="text" class="form-control" id="validationDefault02" value="Reyes" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationDefault03">Comuna</label>
+                    <input type="text" class="form-control" id="validationDefault03" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault04">Provincia</label>
+                    <select class="custom-select" id="validationDefault04" required>
+                      <option selected disabled value="">Seleccione...</option>
+                      <option>Valparaíso</option>
+                      <option>Marga Marga</option>
+                      <option>Petorca</option>
+                      <option>Quillota</option>
+                      <option>San Antonio</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault05">Código Postal</label>
+                    <input type="text" class="form-control" id="validationDefault05" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Escribe aquí tu solicitud:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Acepto que Bacca me contacte de vuelta
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn-contacto" type="submit">Enviar Solicitud</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-      <!--  FIN SECCIÓN: PRODUCTOS -->
+      <!--  FIN SECCIÓN: CONTACTO -->
 
 
       <!--FOOTER -->
       <footer class="footer">
         <div class="row d-flex footer-container">
 
-          <div class="col-sm-4">
+          <div class="col-sm-4  px-4">
             <div class="container" id="suscripcion">
               <div class="container-body">
                 <h5 class="container-title">Suscríbete al Newsletter!</h5>
                 <p class="container-text">& obtén descuentos exclusivos</p>
                 <form for="email" class="mb-3">
-                  <input type="email" id="email" name="email" placeholder="tu-email@aqui.com">
+                  <input type="email" id="email" name="email" placeholder="tu-email@aqui.com" class="footer-input-email">
                 </form>
                 <p>Al suscribirme acepto la <a href="#">política de privacidad.</a>.</p>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm-4 px-4 my-4 mt-sm-0">
             <div class="container" id="rs">
               <div class="container-body form-newsletter">
                 <h5 class="title">Síguenos</h5>
@@ -247,7 +262,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm-4 px-4 mt-4 mt-sm-0">
             <div class="container" id="servicioc">
               <div class="container-body">
                 <h5 class="title">Servicio Al Cliente</h5>
@@ -264,11 +279,11 @@
           </div>
         </div>
 
-        <div class="row justify-content-sm-center">
+        <div class="row justify-content-sm-center py-3">
           <div class="col-sm-auto">
-            <div class="container">
-              <div class="container-body">
-                <a href="#">Diseñado por @ponytakxn, @wwiiddeeweb y @mnzbl</a>
+            <div class="container w-100 text-center">
+              <div class="container-body text-center w-100">
+                Diseñado por <a href="https://github.com/ponytakxn">@ponytkxn</a>, <a href="https://github.com/wwiiddeeweb">@wwiiddeeweb</a> y <a href="https://github.com/MnzBl">@mnzbl</a>
               </div>
             </div>
           </div>
@@ -289,8 +304,8 @@
             <div class="detalle-compra">
               <div class="detalle-producto">
                 <div>
-                  <h5>Laptop riser</h5>
-                  <p>Native wood collection</p>
+                  <h5>Stand Praga</h5>
+                  <p>Colección Madera Nativa</p>
                 </div>
                 <div class="precio-producto">
                   <h6>$16000</h6>
@@ -316,8 +331,8 @@
             <div class="detalle-compra">
               <div class="detalle-producto">
                 <div>
-                  <h5>Synth base</h5>
-                  <p>Native wood collection</p>
+                  <h5>Stand Berlin</h5>
+                  <p>Colección Madera Nativa</p>
                 </div>
                 <div class="precio-producto">
                   <h6>$32000</h6>
@@ -349,7 +364,7 @@
             </div>
             <div class="checkout-btn-container">
               <button class="checkout-btn">
-                <span>CHECKOUT</span>
+                <span>Ir a Pagar</span>
               </button>
             </div>
           </div>
