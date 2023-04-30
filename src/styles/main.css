@@ -184,10 +184,10 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
 }
 
 .main {
-  position: absolute;
+  position: relative;
   top: 100px;
   width: 100%;
-  flex: 1;
+  overflow: hidden;
 }
 
 .main .sections {
