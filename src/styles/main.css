@@ -425,14 +425,6 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   mix-blend-mode: difference;
 }
 
-.btn-contacto {
-  background-color: var(--mid-blue);
-}
-
-.btn-contacto:hover {
-  background-color: var(--mid-blue-hover);
-}
-
 #funciones {
   height: 400px;
   width: 100%;
