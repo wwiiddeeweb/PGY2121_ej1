@@ -25,7 +25,7 @@
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          <span class=navbar-toggler-icon-close">X</span>
+          <span class="navbar-toggler-icon-close">X</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav active ml-auto">
@@ -157,6 +157,56 @@
       <!--  FIN SECCIÓN: PRODUCTOS -->
 
 
+      <!--  SECCIÓN: PRODUCTOS -->
+      <section class="section-contacto">
+
+        <div class="section-productos-grid">
+          <h1 class="text-light heading-grande mb-5">Contáctanos!</h1>
+          <div class="container d-flex flex-column justify-content-center align-items-center">
+
+            <form>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault01">Primer Nombre</label>
+                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault02">Apellido</label>
+                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault03">Ciudad</label>
+                  <input type="text" class="form-control" id="validationDefault03" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault04">State</label>
+                  <select class="custom-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault05">Zip</label>
+                  <input type="text" class="form-control" id="validationDefault05" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <label class="form-check-label" for="invalidCheck2">
+                    Agree to terms and conditions
+                  </label>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+
+          </div>
+        </div>
+      </section>
+      <!--  FIN SECCIÓN: PRODUCTOS -->
 
 
       <!--FOOTER -->
@@ -166,12 +216,12 @@
           <div class="col-sm-4">
             <div class="container" id="suscripcion">
               <div class="container-body">
-                <h5 class="container-title">Sign up to our newsletter</h5>
-                <p class="container-text">& get exclusive deals</p>
-                <form for="email">
-                  <input type="email" id="email" name="email" placeholder="Your email & hit enter">
+                <h5 class="container-title">Suscríbete al Newsletter!</h5>
+                <p class="container-text">& obtén descuentos exclusivos</p>
+                <form for="email" class="mb-3">
+                  <input type="email" id="email" name="email" placeholder="tu-email@aqui.com">
                 </form>
-                <p>By signing up I agree to the <a href="#">Privacy Policy</a>.</p>
+                <p>Al suscribirme acepto la <a href="#">política de privacidad.</a>.</p>
               </div>
             </div>
           </div>
@@ -179,7 +229,7 @@
           <div class="col-sm-4">
             <div class="container" id="rs">
               <div class="container-body form-newsletter">
-                <h5 class="title">Follow Us</h5>
+                <h5 class="title">Síguenos</h5>
                 <div class="follow-list">
                   <a href="https://www.facebook.com/bacca.online/">
                     <img src="../assets/imgs/logo-facebook.png" alt="imagen-facebook" width="20" height="19">
@@ -194,13 +244,13 @@
           <div class="col-sm-4">
             <div class="container" id="servicioc">
               <div class="container-body">
-                <h5 class="title">Customer Service</h5>
+                <h5 class="title">Servicio Al Cliente</h5>
                 <ul class="container-body-list">
                   <li>
-                    <a class="link-footer" href="#">Contact us</a>
+                    <a class="link-footer" href="#">Contáctanos</a>
                   </li>
                   <li>
-                    <a class="link-footer" href="#">Privacy Policy</a>
+                    <a class="link-footer" href="#">Política de Privacidad</a>
                   </li>
                 </ul>
               </div>
@@ -212,24 +262,20 @@
           <div class="col-sm-auto">
             <div class="container">
               <div class="container-body">
-                <a href="#">Designed & Built by Viso</a>
-                <div class="copyRightLogo">
-                  ©
-                  <img src="../assets/svgs/logo_bacca.svg" alt="logo-bacca">
-                </div>
+                <a href="#">Diseñado por @ponytknx, @wwiiddeeweb y @mnzbl</a>
               </div>
             </div>
           </div>
         </div>
       </footer>
       <!--FIN FOOTER-->
-      
+
       <!--CARRITO-->
       <div class="collapse show-cart" id="carritoCompras">
         <h6 class="titulo-carrito">TU COMPRA</h6>
 
         <button class="close-btn" data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">X</button>
-        
+
         <div class="carrito-container">
           <div class="producto-carrito">
             <img src="../assets/imgs/products/desktop.png" alt="img-producto">
