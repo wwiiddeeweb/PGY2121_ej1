@@ -9,6 +9,7 @@
   --mid-blue: #6aaebf;
   --mid-blue-hover: #85c6d6;
   --light-gray: #cddce0;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -433,7 +434,7 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   background-color: var(--mid-blue-hover);
 }
 
-#funciones {
+/* #funciones {
   height: 400px;
   width: 100%;
   background-color: var(--dark-orange);
@@ -444,7 +445,7 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   background-color: var(--mid-blue);
   height: 400px;
 }
-
+ */
 footer {
   background-color: var(--light-gray);
   justify-content: space-around;
@@ -839,5 +840,11 @@ input {
   .link-footer {
     padding-left: calc(((100vw/3)/3.4));
     padding-right: calc(((100vw/3)/3.4));
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
