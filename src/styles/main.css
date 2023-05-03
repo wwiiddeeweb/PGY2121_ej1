@@ -422,7 +422,6 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   mix-blend-mode: difference;
 }
 
-
 footer {
   background-color: var(--light-gray);
   justify-content: space-around;
