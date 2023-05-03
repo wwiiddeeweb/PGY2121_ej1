@@ -75,12 +75,12 @@ header {
   display: flex;
   gap: 8px;
   cursor: pointer;
+}
 
-  & button {
-    border: none;
-    background: none;
-    color: var(--main-white);
-  }
+.nav-icons-container > button {
+  border: none;
+  background: none;
+  color: var(--main-white);
 }
 
 .nav-link {
@@ -165,10 +165,6 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
 :root:has(div.navbar-collapse.collapse.show)>body {
   overflow: hidden;
 }
-
-/* :root:has(.show)>body .navbar-blur-bg {
-  backdrop-filter: blur(16px);
-} */
 
 .main-container {
   padding: 0;
@@ -561,16 +557,15 @@ input {
 .producto-carrito {
   display: flex;
   gap: 20px;
-  /* padding: 0 20px; */
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px var(--dark-gray);
+}
 
-  & img {
-    height: 150px;
-    width: 220px;
-    border-right: solid 1px var(--dark-gray);
-  }
+.img-container > img {
+  height: 150px;
+  width: 220px;
+  border-right: solid 1px var(--dark-gray);
 }
 
 .detalle-compra {
@@ -582,17 +577,17 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  & h5 {
-    margin: 0;
-    color: var(--dark-gray);
-    font-weight: 900;
-  }
+.detalle-producto > h5 {
+  margin: 0;
+  color: var(--dark-gray);
+  font-weight: 900;
+}
 
-  & p {
-    margin: 0;
-    color: var(--aqua-blue);
-  }
+.detalle-producto > p {
+  margin: 0;
+  color: var(--aqua-blue);
 }
 
 .selector-producto {
@@ -601,16 +596,14 @@ input {
   gap: 10px;
   margin-top: 12px;
   color: var(--dark-orange);
+}
 
-  & div {
-    & button {
-      border-radius: 50%;
-      border: none;
-      background: none;
-      width: 22px;
-      margin: 0px 8px 0px 8px;
-    }
-  }
+.selector-producto-container > button {
+  border-radius: 50%;
+  border: none;
+  background: none;
+  width: 22px;
+  margin: 0px 8px 0px 8px;
 }
 
 .borrar-btn {
@@ -647,16 +640,16 @@ input {
   height: 60px;
   border-bottom: 1px solid var(--dark-gray);
   border-top: 1px solid var(--dark-gray);
+}
 
-  & h4 {
-    margin: 0;
-  }
+.detalle-pago > h4 {
+  margin: 0;
+}
 
-  & h5 {
-    color: var(--mid-blue);
-    font-weight: 700;
-    margin: 0;
-  }
+.detalle-pago > h5 {
+  color: var(--mid-blue);
+  font-weight: 700;
+  margin: 0;
 }
 
 .despacho {
@@ -677,12 +670,12 @@ input {
   border: none;
   display: inline-block;
   background-color: var(--main-white);
+}
 
-  & span {
-    display: inline-block;
-    transform: skew(21deg);
-    font-weight: 600;
-  }
+.checkout-btn > span {
+  display: inline-block;
+  transform: skew(21deg);
+  font-weight: 600;
 }
 
 .checkout-btn::before {
