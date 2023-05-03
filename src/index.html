@@ -174,25 +174,25 @@
           <div class="row">
 
 
-            <form>
+            <form id="contact-form">
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault01">Primer Nombre</label>
-                  <input type="text" class="form-control" id="validationDefault01" value="Juanita" required>
+                  <input type="text" class="form-control" id="validationDefault01" name="usr_pnombre" value="Juanita">
                 </div>
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault02">Apellido</label>
-                  <input type="text" class="form-control" id="validationDefault02" value="Reyes" required>
+                  <input type="text" class="form-control" id="validationDefault02" name="usr_papellido" value="Reyes" >
                 </div>
               </div>
               <div class="form-row">
                 <div class="col-md-6 mb-3">
                   <label for="validationDefault03">Comuna</label>
-                  <input type="text" class="form-control" id="validationDefault03" required>
+                  <input type="text" class="form-control" id="validationDefault03" name="usr_comuna">
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="validationDefault04">Provincia</label>
-                  <select class="custom-select" id="validationDefault04" required>
+                  <select class="custom-select" id="validationDefault04" name="usr_comuna">
                     <option selected disabled value="">Seleccione...</option>
                     <option>Valparaíso</option>
                     <option>Marga Marga</option>
@@ -203,18 +203,18 @@
                 </div>
                 <div class="col-md-3 mb-3">
                   <label for="validationDefault05">Código Postal</label>
-                  <input type="text" class="form-control" id="validationDefault05" required>
+                  <input type="text" class="form-control" id="validationDefault05" name="usr_codpostal">
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Escribe aquí tu solicitud:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="usr_solicitud"></textarea>
               </div>
 
               <div class="form-group">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" name="usr_aceptocondiciones">
                   <label class="form-check-label" for="invalidCheck2">
                     Acepto que Bacca me contacte de vuelta
                   </label>
@@ -386,19 +386,10 @@
   <!-- END MAIN ROW - MAIN WRAPPER -->
 
 
+  <!-- CUSTOM SCRIPTS -->
+  <script src="./scripts/main.js"></script>
+  <!-- CUSTOM SCRIPTS -->
 
-  <!-- UTILITARY SCRIPT FOR DYNAMIC SVG, ON LOADED DOM -->
-  <script>
-    const svgHolder = document.querySelector('object#dynamic-svg');
-    svgHolder.onload = () => {
-      const svgDocument = svgHolder.contentDocument;
-      const style = svgDocument.createElementNS("http://www.w3.org/2000/svg", "style");
-      style.textContent = '@import url("producto_animado.css");';
-      const svgElem = svgDocument.querySelector('svg');
-      svgElem.insertBefore(style, svgElem.firstChild);
-    };
-  </script>
-  <!-- UTILITARY SCRIPT FOR DYNAMIC SVG, ON LOADED DOM -->
 </body>
 
 </html>
