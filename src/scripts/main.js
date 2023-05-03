@@ -11,9 +11,7 @@ const contactFormValidator = () => {
     formElement.addEventListener("submit", (evento) => {
         evento.preventDefault();
 
-        console.log(evento.target)
-        console.log()
-
+        console.log(`inputs recibidos: ${JSON.stringify(evento.target.elements)}`)
 
     })
 
