@@ -1,11 +1,34 @@
+import { isChecked } from "../validators/boolean-validators.js";
 import { minLengthValidator } from "../validators/string-validators.js";
 
 export const VALIDATION_RULES
     = {
-    usr_pnombre: (str) => minLengthValidator(str, 3),
-    usr_papellido: (str) => minLengthValidator(str, 5),
-    usr_comuna: (str) => minLengthValidator(str, 4),
-    usr_codpostal: () => true,
-    usr_solicitud: () => true,
-    usr_aceptocondiciones: (val) => val,
+    usr_pnombre: {
+        validatorFn: (str) => minLengthValidator(str, 1),
+        customError: 'Debe ingresar su nombre'
+    },
+    usr_papellido: {
+        validatorFn: (str) => minLengthValidator(str, 1),
+        customError: 'Debe ingresar apellido'
+    },
+    usr_comuna: {
+        validatorFn: (str) => minLengthValidator(str, 4),
+        customError: 'Debe ingresar su comuna'
+    },
+    usr_codpostal: {
+        validatorFn: (str) => minLengthValidator(str, 4),
+        customError: 'Debe ingresar su código postal'
+    },
+    usr_provincia: {
+        validatorFn: (str) => minLengthValidator(str, 4),
+        customError: 'Debe seleccionar provincia'
+    },
+    usr_solicitud: {
+        validatorFn: (str) => minLengthValidator(str, 15),
+        customError: 'Por favor, complete su solicitud. Mínimo 15 carácteres'
+    },
+    usr_aceptocondiciones: {
+        validatorFn: (value) => isChecked(value),
+        customError: 'Debe aceptar las condiciones'
+    },
 }

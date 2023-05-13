@@ -1,12 +1,28 @@
-export const renderValidationLabel = (element) => {
-    console.log('POR HACER: debe renderizar la validación en el front-end')
+export const renderValidationLabel = (isValid, element, customError) => {
+
     const errorLabel = element.concat('_err')
     const el = document.querySelector(`#${errorLabel}`);
-    return el && applyErrorStyle(el);
+
+    if(isValid && el) {
+        return removeErrorStyle(el);
+    }
+
+    if(!isValid && el && customError ) {
+        return applyErrorStyle(el, customError)
+    }
+
+    applyErrorStyle(el, customError);
 }
 
 
-const applyErrorStyle = (element) => {
+const applyErrorStyle = (element, customError) => {
     element.style.color = 'red';
-    element.innerHTML = "ERROR!";
+    if(!customError) {
+        element.innerHTML = "ERROR!";
+    }
+    element.innerHTML = customError.toString();
+}
+
+export const removeErrorStyle = (element) => {
+    element.innerHTML = "";
 }
