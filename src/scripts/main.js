@@ -57,7 +57,29 @@ const dynamicSvgFix = () => {
     };
 }
 
+// login form handler
+const toggleLoginForm = () => {
+    const loginBtn = document.getElementById('login-form-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const loginForm = document.querySelector('.form-container');
+
+    loginBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleFn();
+    })
+
+    cancelBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        toggleFn();
+    })
+
+    function toggleFn() {
+        loginForm.style.visibility === 'hidden' ? loginForm.style.visibility = 'visible' : loginForm.style.visibility = 'hidden';
+    }
+}
+
 // ejecuciones:
 
 dynamicSvgFix();
 contactFormHandler();
+toggleLoginForm();

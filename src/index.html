@@ -61,7 +61,7 @@
             <li class="nav-item">
               <div class="nav-link">
                 <div class="nav-icons-container">
-                  <a>Iniciar Sesión</a>
+                  <a id="login-form-btn" type="button">Iniciar Sesión</a>
                   <img src="../assets/svgs/icons/user_icon.svg" alt="Iniciar Sesión">
                 </div>
               </div>
@@ -85,22 +85,26 @@
         <div class="input-box">
             <form for="email">
                 <div class="email-box">
-                    <input type="email" placeholder="Ingrese email" name="login-email">  
+                  <label for="email-box">Ingrese email</label>
+                  <input type="email" placeholder="tuemail@correo.com" name="login-email">  
                 </div>
                 <div class="password-box">
-                    <input type="Password" placeholder="Ingrese Contraseña" name="login-contraseña">
+                  <label for="password-box">Contraseña</label>
+                  <input type="Password" placeholder="*******" name="login-contraseña">
                 </div>
             </form>    
         </div>
-        <button class="login-btn">Ingresar</button>
+        <div>
+          <button class="login-buttons login-btn">Ingresar</button>
+          <button class="login-buttons cancel-btn">Cancelar</button>
+        </div>
+      
     </div>
   </div>
   <!--END INICIO DE SESION-->
 
   <!--  MAIN SITE WRAPPER -->
   <div class="main">
-
-
 
     <!--  HERO -->
     <div class="hero">
