@@ -62,23 +62,33 @@ const toggleLoginForm = async () => {
     const loginBtn = document.getElementById('login-form-btn');
     const cancelBtn = document.querySelector('.cancel-btn');
     const loginForm = document.querySelector('.form-container');
-
-    console.log(loginForm.style.cssText)
+    const blurFilter = document.getElementById('blur-filter');
+    const bodyWrapper = document.querySelector('body');
 
     loginBtn.addEventListener('click', (event) => {
         event.preventDefault();
         toggleFn();
+        toggleBlur();
     })
 
     cancelBtn.addEventListener('click', (event) => {
         event.preventDefault();
         toggleFn();
+        toggleBlur();
     })
 
     function toggleFn() {
         loginForm.style.visibility === 'hidden' || loginForm.style.cssText === ''
             ? loginForm.style.visibility = 'visible'
             : loginForm.style.visibility = 'hidden';
+    }
+
+    function toggleBlur() {
+        blurFilter.style.display === 'none' || blurFilter.style.cssText === ''
+            ? blurFilter.style.display = 'block'
+            : blurFilter.style.display = 'none';
+
+        blurFilter.style.display === 'block' ? bodyWrapper.style.overflow = 'hidden' : bodyWrapper.style.overflow = 'auto';
     }
 }
 
