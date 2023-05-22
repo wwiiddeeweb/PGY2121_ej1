@@ -58,37 +58,38 @@ const dynamicSvgFix = () => {
 }
 
 // controlador del formulario login
-const toggleLoginForm = async () => {
+const toggleLoginForm = () => {
     const loginBtn = document.getElementById('login-form-btn');
     const cancelBtn = document.querySelector('.cancel-btn');
     const loginForm = document.querySelector('.form-container');
     const blurFilter = document.getElementById('blur-filter');
     const bodyWrapper = document.querySelector('body');
+    let isOverflowHidden = false;
 
     loginBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        toggleFn();
-        toggleBlur();
+        toggleVisibility(loginForm);
+        toggleVisibility(blurFilter);
+        if(isOverflowHidden === false) {
+            bodyWrapper.style.setProperty('overflow','hidden');
+            isOverflowHidden = true;
+        }
     })
 
     cancelBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        toggleFn();
-        toggleBlur();
+        toggleVisibility(loginForm);
+        toggleVisibility(blurFilter);
+        if(isOverflowHidden === true) {
+            bodyWrapper.style.setProperty('overflow','auto')
+            isOverflowHidden = false;
+        }
     })
 
-    function toggleFn() {
-        loginForm.style.visibility === 'hidden' || loginForm.style.cssText === ''
-            ? loginForm.style.visibility = 'visible'
-            : loginForm.style.visibility = 'hidden';
-    }
-
-    function toggleBlur() {
-        blurFilter.style.display === 'none' || blurFilter.style.cssText === ''
-            ? blurFilter.style.display = 'block'
-            : blurFilter.style.display = 'none';
-
-        blurFilter.style.display === 'block' ? bodyWrapper.style.overflow = 'hidden' : bodyWrapper.style.overflow = 'auto';
+    const toggleVisibility = (HTMLElement) => {
+        HTMLElement.style.visibility === 'hidden' || HTMLElement.style.cssText === ''
+            ? HTMLElement.style.visibility = 'visible'
+            : HTMLElement.style.visibility = 'hidden';
     }
 }
 
