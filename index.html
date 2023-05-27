@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ECommerce Bacca</title>
-  <link rel="stylesheet" href="./build/reset.css">
+  <link rel="stylesheet" href="src/build/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/login.css">
-  <link rel="stylesheet" href="./build/main.css">
+  <link rel="stylesheet" href="src/styles/login.css">
+  <link rel="stylesheet" href="src/build/main.css">
 </head>
 
 <body class="container-fluid p-0">
@@ -26,7 +26,7 @@
     <header class="navbar-blur-bg">
       <nav class="navbar navbar-expand-lg navbar-dark bg-none">
         <a class="navbar-brand" href="#">
-          <img src="../assets/svgs/logo_bacca.svg" />
+          <img src="assets/svgs/logo_bacca.svg" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
               <div class="nav-link">
                 <div class="nav-icons-container">
                   <span data-currency="CLP Peso" data-symbol="$" href="#">CLP $</span>
-                  <img src="../assets/svgs/icons/currency_symbol.svg" alt="Moneda" class="nav-link-carrito">
+                  <img src="assets/svgs/icons/currency_symbol.svg" alt="Moneda" class="nav-link-carrito">
                 </div>
               </div>
             </li>
@@ -56,7 +56,7 @@
               <div class="nav-link">
                 <div class="nav-icons-container">
                   <button data-toggle="collapse" data-target="#carritoCompras" type="button" aria-expanded="false" aria-controls="carritoCompras">Carrito (2)
-                    <img src="../assets/svgs/icons/cart_icon.svg" alt="Carrito" class="nav-link-carrito">
+                    <img src="assets/svgs/icons/cart_icon.svg" alt="Carrito" class="nav-link-carrito">
                   </button>
             <li class="nav-item">
               <a class="nav-link" href="#contacto">Contáctanos</a>
@@ -66,7 +66,7 @@
               <div class="nav-link">
                 <div class="nav-icons-container">
                   <a id="login-form-btn" type="button">Iniciar Sesión</a>
-                  <img src="../assets/svgs/icons/user_icon.svg" alt="Iniciar Sesión">
+                  <img src="assets/svgs/icons/user_icon.svg" alt="Iniciar Sesión">
                 </div>
               </div>
             </li>
@@ -116,18 +116,18 @@
     <!--  HERO -->
     <div class="hero">
       <div class="scrolldown" id="scrollDown">
-        <img src=" ../assets/svgs/icons/arrow_down.svg" class="scrolldown-icon" alt="">
+        <img src="assets/svgs/icons/arrow_down.svg" class="scrolldown-icon" alt="">
       </div>
     </div>
     <div class="sub-hero">
       <div class="sub-hero-container">
-        <object id="dynamic-svg" type="image/svg+xml" data="../assets/svgs/producto_animado.svg"></object>
+        <object id="dynamic-svg" type="image/svg+xml" data="assets/svgs/producto_animado.svg"></object>
         <h2 class="text-light text-wrap">Productos de calidad, hechos a manos por luthiers nacionales.</h2>
         <blockquote class="blockquote">
           <p class="mb-0">"Hechos para <mark>toda la vida.</mark>"</p>
           <div class="blockquote-footer">Rolling Stones Magazine.</div>
         </blockquote>
-        <button class="btn btn-outline-light btn-sub-hero">Ver todos nuestros productos <img src="../assets/svgs/icons/eye_icon.svg" class="btn-sub-hero-icon--eye" /></button>
+        <button class="btn btn-outline-light btn-sub-hero">Ver todos nuestros productos <img src="assets/svgs/icons/eye_icon.svg" class="btn-sub-hero-icon--eye" /></button>
       </div>
     </div>
     <!--  END HERO -->
@@ -142,14 +142,14 @@
           <div class="row mb-4 dos-productos-container">
             <div class="col">
               <div class="producto-container-producto">
-                <a style="text-decoration: none;" href="./views/berlin.html">
+                <a style="text-decoration: none;" href="src/views/berlin.html">
                   <div class="producto-overlay">
-                    <img src="../assets/imgs/products/live.png" alt="">
+                    <img src="assets/imgs/products/live.png" alt="">
                     <h3 class="text-light">Stand Berlín $16000</h3>
                     <div class="producto-detalle">
                       <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="assets/svgs/icons/cart_icon.svg" /></div>
                       </div>
                     </div>
                   </div>
@@ -158,14 +158,14 @@
             </div>
             <div class="col">
               <div class="producto-container-producto">
-                <a style="text-decoration: none;" href="./views/genova.html">
+                <a style="text-decoration: none;" href="src/views/genova.html">
                   <div class="producto-overlay">
-                    <img src="../assets/imgs/products/studio.png" alt="">
+                    <img src="assets/imgs/products/studio.png" alt="">
                     <h3 class="text-light">Stand Genova $16000</h3>
                     <div class="producto-detalle">
                       <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="assets/svgs/icons/cart_icon.svg" /></div>
                       </div>
                     </div>
                   </div>
@@ -176,14 +176,14 @@
           <div class="row">
             <div class="col">
               <div class="producto-container-producto">
-                <a style="text-decoration: none;" href="./views/praga.html">
+                <a style="text-decoration: none;" href="src/views/praga.html">
                   <div class="producto-overlay">
-                    <img src="../assets/imgs/products/desktop.png" alt="">
+                    <img src="assets/imgs/products/desktop.png" alt="">
                     <h3 class="text-light">Stand Praga $16000</h3>
                     <div class="producto-detalle">
                       <div class="row w-100 justify-content-center align-items-center">
-                        <div class="col d-flex justify-content-center text-light">Ver más <img src="../assets/svgs/icons/eye_icon.svg" /></div>
-                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="../assets/svgs/icons/cart_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver más <img src="assets/svgs/icons/eye_icon.svg" /></div>
+                        <div class="col d-flex justify-content-center text-light">Ver Stock <img src="assets/svgs/icons/cart_icon.svg" /></div>
                       </div>
                     </div>
                   </div>
@@ -294,10 +294,10 @@
               <h5 class="title">Síguenos</h5>
               <div class="follow-list">
                 <a href="https://www.facebook.com/bacca.online/">
-                  <img src="../assets/imgs/logo-facebook.png" alt="imagen-facebook" width="20" height="19">
+                  <img src="assets/imgs/logo-facebook.png" alt="imagen-facebook" width="20" height="19">
                 </a>
                 <a href="https://www.instagram.com/bacca.online/">
-                  <img src="../assets/imgs/pngwing.com.png" alt="imagen-facebook" width="20" height="19"> </a>
+                  <img src="assets/imgs/pngwing.com.png" alt="imagen-facebook" width="20" height="19"> </a>
               </div>
             </div>
           </div>
@@ -341,7 +341,7 @@
       <div class="carrito-container">
         <div class="producto-carrito">
           <div class="img-container">
-            <img src="../assets/imgs/products/desktop.png" alt="img-producto">
+            <img src="assets/imgs/products/desktop.png" alt="img-producto">
           </div>
 
           <div class="detalle-compra">
@@ -368,7 +368,7 @@
 
         <div class="producto-carrito">
           <div class="img-container">
-            <img src="../assets/imgs/products/live.png" alt="img-producto">
+            <img src="assets/imgs/products/live.png" alt="img-producto">
           </div>
 
           <div class="detalle-compra">
@@ -429,7 +429,7 @@
 
 
   <!-- CUSTOM SCRIPTS -->
-  <script src="./scripts/main.js" type="module"></script>
+  <script src="src/scripts/main.js" type="module"></script>
   <!-- CUSTOM SCRIPTS -->
 
 </body>
