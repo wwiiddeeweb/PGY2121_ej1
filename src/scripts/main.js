@@ -50,8 +50,14 @@ const validatorRunner = (inputs) => {
 
 // handler del formulario de contacto de la página principal
 const contactFormHandler = () => {
+    const onSuccessFn = () => {
+        console.log('[FORM VALIDATOR OK!] Enviando al servidor...');
+        setTimeout(() => {
+            console.log('[FORM VALIDATOR: RESPUESTA SERVIDOR] Formulario recibido!');
+        }, 1000)
+    }
     const elementPrefix = "usr";
-    bindEventListenerToForm(contactFormElement, elementPrefix, "submit");
+    bindEventListenerToForm(contactFormElement, elementPrefix, "submit", onSuccessFn);
 }
 
 // handler del formulario de login
