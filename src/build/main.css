@@ -71,6 +71,10 @@ header {
   margin-top: 19px;
   font-weight: 700;
   gap: 70px;
+
+  @media (max-width: 1200px){
+    gap:38px;
+  }
 }
 
 .nav-item {
@@ -172,6 +176,14 @@ div.navbar-collapse.collapse.show ul>li:nth-child(3):after {
   font-size: 30px;
   font-weight: lighter;
   padding: 0px 6.5px 0px 6.5px;
+}
+
+.nav-logout {
+  display: none;
+}
+
+.nav-login {
+  display: block;
 }
 
 :root:has(div.navbar-collapse.collapse.show)>body .navbar-toggler-icon {

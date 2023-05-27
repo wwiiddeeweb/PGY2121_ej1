@@ -62,7 +62,7 @@
               <a class="nav-link" href="#contacto">Contáctanos</a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item nav-login">
               <div class="nav-link">
                 <div class="nav-icons-container">
                   <a id="login-form-btn" type="button">Iniciar Sesión</a>
@@ -70,6 +70,25 @@
                 </div>
               </div>
             </li>
+
+            <li class="nav-item nav-logout">
+              <div class="nav-link">
+                <div class="nav-icons-container">
+                  <span id="user-email"></span>
+                  <img src="assets/svgs/icons/user_icon.svg" alt="Nombre usuario">
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item nav-logout">
+              <div class="nav-link">
+                <div class="nav-icons-container">
+                  <a id="logout-btn" type="button">Cerrar Sesión</a>
+                </div>
+              </div>
+            </li>
+
+
         </div>
   </div>
   </li>
@@ -88,12 +107,12 @@
         <h3>Inicio Sesión</h3>
         <div class="input-box">
             <form id="login-form" action="#">
-                <div class="email-box">
+                <div class="email-box login-box">
                   <label for="login_email">Ingrese email</label>
                   <input class="login-input" placeholder="tuemail@correo.com" name="login_email" id="login_email">
                   <label id="login_email_err"></label>
                 </div>
-                <div class="password-box">
+                <div class="password-box login-box">
                   <label for="login_clave">Contraseña</label>
                   <input class="login-input" type="Password" placeholder="*******" name="login_clave" id="login_clave">
                   <label id="login_clave_err"></label>

@@ -23,10 +23,10 @@ const eventHandler = (event, prefix, onSuccessFn) => {
         const inputs = inputExtractor(elements, prefix);
 
         if (inputs) {
-           const allValid = validatorRunner(inputs);
-           if(allValid && onSuccessFn) {
-               onSuccessFn?.();
-           }
+            const allValid = validatorRunner(inputs);
+            if(allValid && onSuccessFn) {
+                onSuccessFn?.();
+            }
         }
     }
 }
@@ -63,10 +63,17 @@ const contactFormHandler = () => {
 // handler del formulario de login
 
 const loginFormHandler = () => {
-    const elementPrefix = "login"
+    const elementPrefix = "login";
     const eventType = "submit";
     const onSuccessFn = () => {
+        const loginElement = document.querySelector('.nav-login');
+        const logoutElements = document.querySelectorAll('.nav-logout');
+        const emailValue = document.getElementById('login_email').value;
+        const userEmail = document.getElementById('user-email');
+        userEmail.innerText = emailValue;
         loginFormHideToggle();
+        loginElement.style.display = 'none';
+        logoutElements.forEach(element => element.style.display = 'block');
         console.log('[FORM VALIDATOR OK!] Enviando al servidor...');
         setTimeout(() => {
             console.log('[FORM VALIDATOR: RESPUESTA SERVIDOR] Formulario recibido!');
@@ -79,10 +86,11 @@ const loginFormHideToggle = () => {
     const loginForm = document.querySelector('.form-container');
     const blurFilter = document.getElementById('blur-filter');
     const bodyWrapper = document.querySelector('body');
-    const isOverflowHidden = bodyWrapper.style.overflow;
+    const isOverflowHidden = bodyWrapper.style.overflow === 'hidden' ? true : false;
 
     toggleVisibility(loginForm);
     toggleVisibility(blurFilter);
+    
     if(isOverflowHidden) {
         bodyWrapper.style.setProperty('overflow','auto')
     } else {
@@ -92,7 +100,6 @@ const loginFormHideToggle = () => {
 
 // conmutador del formulario login
 const toggleLoginForm = () => {
-
     const cancelBtn = document.querySelector('.cancel-btn');
     const loginBtn = document.getElementById('login-form-btn');
 
@@ -106,6 +113,18 @@ const toggleLoginForm = () => {
         const inputsToClean = ['login_email','login_clave'];
         inputsToClean.forEach(element => renderValidationLabel(true, element));
         loginFormHideToggle();
+    })
+}
+
+const logoutFn = () => {
+    const logoutBtn = document.getElementById('logout-btn');
+    const loginElement = document.querySelector('.nav-login');
+    const logoutElements = document.querySelectorAll('.nav-logout');
+
+    logoutBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        logoutElements.forEach(element => element.style.display = 'none');
+        loginElement.style.display = 'block';
     })
 }
 
@@ -127,3 +146,4 @@ dynamicSvgFix();
 contactFormHandler();
 toggleLoginForm();
 loginFormHandler();
+logoutFn();

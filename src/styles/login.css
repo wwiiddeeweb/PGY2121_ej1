@@ -13,14 +13,19 @@
 .form-container .box{
     background-color: var(--main-white);
     border: 1px solid var(--dark-orange);
-    width: 320px;
-    height: 420px;
+    width: 350px;
+    height: 540px;
     padding: 20px 10px;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 760px) {
+      width: 100vw;
+      height: 100vh;
+    }
 }
 
 .form-container h3{
@@ -35,8 +40,11 @@
     text-align: center;
 }
 
-.email-box{
-    margin-bottom: 25px;
+.login-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .login-buttons {
