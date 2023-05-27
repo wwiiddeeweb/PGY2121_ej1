@@ -1,5 +1,6 @@
 import { isChecked } from "../validators/boolean-validators.js";
-import { minLengthValidator } from "../validators/string-validators.js";
+import { minLengthValidator, validEmailValidator } from "../validators/string-validators.js";
+import { toggleVisibility } from "../utils/ui.utils.js";
 
 export const VALIDATION_RULES
     = {
@@ -31,4 +32,12 @@ export const VALIDATION_RULES
         validatorFn: (value) => isChecked(value),
         customError: 'Debe aceptar las condiciones'
     },
+    login_email: {
+        validatorFn: (str) => validEmailValidator(str),
+        customError: 'Debe ingresar un email válido'
+    },
+    login_clave: {
+        validatorFn: (str) => minLengthValidator(str, 6),
+        customError: 'Debe ingresar una clave válida, de al menos 6 carácteres',
+    }
 }

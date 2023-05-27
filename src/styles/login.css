@@ -81,8 +81,8 @@
   right: 0;
   opacity: 1;
 }
-  
-input{
+
+.login-input{
   height: 50px;
   width: 250px;
   background-color: var(--main-white);

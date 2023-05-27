@@ -1,47 +1,105 @@
 import { VALIDATION_RULES } from "./constants/validation-rules.js";
 import { renderValidationLabel } from "./services/render-validation.service.js";
 import { inputExtractor } from "./utils/form.utils.js";
+import { toggleVisibility } from "./utils/ui.utils.js";
 
-// arr de validaciones
+// forms -> DOM references
+const loginFormElement = document.querySelector("#login-form");
+const contactFormElement = document.querySelector("#contact-form");
 
-let inputValidations = [];
+const areAllInputsValid = (validationArr) => {
+    return validationArr.every(value => value === true);
+}
 
-const areAllInputsValid = () => {
-    return inputValidations.every(value => value === true);
+const bindEventListenerToForm = (formElement, prefix, eventType, onSuccessFn) =>
+{
+    return formElement.addEventListener(eventType, event => eventHandler(event, prefix, onSuccessFn));
+}
+
+const eventHandler = (event, prefix, onSuccessFn) => {
+    if (event){
+        event.preventDefault();
+        const { target: { elements } } = event;
+        const inputs = inputExtractor(elements, prefix);
+
+        if (inputs) {
+           const allValid = validatorRunner(inputs);
+           if(allValid && onSuccessFn) {
+               onSuccessFn?.();
+           }
+        }
+    }
+}
+const validatorRunner = (inputs) => {
+    const loginInputValidations = [];
+    for (let input in inputs) {
+        const value = inputs[input];
+        const { validatorFn, customError } = VALIDATION_RULES[input];
+        if(validatorFn){
+            const result = validatorFn?.(value);
+            loginInputValidations.push(Boolean(result));
+            customError ? renderValidationLabel(result, input, customError) : renderValidationLabel(result, input);
+        }
+    }
+    const allValid = areAllInputsValid(loginInputValidations);
+    if(!allValid){
+        return console.log('[FORM VALIDATOR ERROR!] No se enviará al servidor');
+    }
+    return allValid;
 }
 
 // handler del formulario de contacto de la página principal
-const contactFormHandler = async () => {
+const contactFormHandler = () => {
+    const elementPrefix = "usr";
+    bindEventListenerToForm(contactFormElement, elementPrefix, "submit");
+}
 
-    const formElement = document.querySelector("#contact-form");
+// handler del formulario de login
 
-
-    formElement.addEventListener("submit", (evento) => {
-        evento.preventDefault();
-        const { target: { elements }  } = evento;
-        const inputs = inputExtractor(elements, "usr");
-
-        inputValidations = [];
-        for (let input in inputs) {
-            const value = inputs[input];
-
-            const { validatorFn, customError } = VALIDATION_RULES[input];
-            if(validatorFn) {
-                const result = validatorFn?.(value);
-
-                inputValidations.push(Boolean(result));
-                customError ? renderValidationLabel(result, input, customError) : renderValidationLabel(result, input);
-            }
-        }
-        const allValid = areAllInputsValid();
-        if(!allValid){
-            return console.log('[VALIDACIONES ERROR!] No se enviará al servidor');
-        }
-        console.log('[VALIDACIONES OK!] Enviando al servidor...');
+const loginFormHandler = () => {
+    const elementPrefix = "login"
+    const eventType = "submit";
+    const onSuccessFn = () => {
+        loginFormHideToggle();
+        console.log('[FORM VALIDATOR OK!] Enviando al servidor...');
         setTimeout(() => {
-            console.log('[SERVIDOR] Formulario recibido!')
+            console.log('[FORM VALIDATOR: RESPUESTA SERVIDOR] Formulario recibido!');
+        }, 1000)
+    }
+    bindEventListenerToForm(loginFormElement, elementPrefix, eventType, onSuccessFn);
+}
 
-        },1000)
+const loginFormHideToggle = () => {
+    const loginForm = document.querySelector('.form-container');
+    const blurFilter = document.getElementById('blur-filter');
+    const bodyWrapper = document.querySelector('body');
+    const isOverflowHidden = bodyWrapper.style.overflow;
+
+    toggleVisibility(loginForm);
+    toggleVisibility(blurFilter);
+    if(isOverflowHidden) {
+        bodyWrapper.style.setProperty('overflow','auto')
+    } else {
+        bodyWrapper.style.setProperty('overflow','hidden');
+    }
+}
+
+// conmutador del formulario login
+const toggleLoginForm = () => {
+
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const loginBtn = document.getElementById('login-form-btn');
+
+    loginBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        loginFormHideToggle();
+    })
+
+    cancelBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        const inputsToClean = ['login_email','login_clave'];
+        inputsToClean.forEach(element => renderValidationLabel(true, element));
+        loginFormHideToggle();
     })
 }
 
@@ -57,44 +115,9 @@ const dynamicSvgFix = () => {
     };
 }
 
-// controlador del formulario login
-const toggleLoginForm = () => {
-    const loginBtn = document.getElementById('login-form-btn');
-    const cancelBtn = document.querySelector('.cancel-btn');
-    const loginForm = document.querySelector('.form-container');
-    const blurFilter = document.getElementById('blur-filter');
-    const bodyWrapper = document.querySelector('body');
-    let isOverflowHidden = false;
-
-    loginBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        toggleVisibility(loginForm);
-        toggleVisibility(blurFilter);
-        if(isOverflowHidden === false) {
-            bodyWrapper.style.setProperty('overflow','hidden');
-            isOverflowHidden = true;
-        }
-    })
-
-    cancelBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        toggleVisibility(loginForm);
-        toggleVisibility(blurFilter);
-        if(isOverflowHidden === true) {
-            bodyWrapper.style.setProperty('overflow','auto')
-            isOverflowHidden = false;
-        }
-    })
-
-    const toggleVisibility = (HTMLElement) => {
-        HTMLElement.style.visibility === 'hidden' || HTMLElement.style.cssText === ''
-            ? HTMLElement.style.visibility = 'visible'
-            : HTMLElement.style.visibility = 'hidden';
-    }
-}
-
 // ejecuciones:
 
 dynamicSvgFix();
 contactFormHandler();
 toggleLoginForm();
+loginFormHandler();

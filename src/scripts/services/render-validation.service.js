@@ -1,17 +1,20 @@
 export const renderValidationLabel = (isValid, element, customError) => {
+    try {
+        const errorLabel = element.concat('_err')
+        const el = document.querySelector(`#${errorLabel}`);
 
-    const errorLabel = element.concat('_err')
-    const el = document.querySelector(`#${errorLabel}`);
-
-    if(isValid && el) {
-        return removeErrorStyle(el);
+        if(!el) {
+            return console.error('renderValidationLabel | element not found')
+        }
+        if(isValid && el) {
+            return removeErrorStyle(el);
+        }
+        if(!isValid && el && customError ) {
+            return applyErrorStyle(el, customError)
+        }
+    } catch (e) {
+        console.error(`renderValidationLabel error : ${e}`)
     }
-
-    if(!isValid && el && customError ) {
-        return applyErrorStyle(el, customError)
-    }
-
-    applyErrorStyle(el, customError);
 }
 
 
