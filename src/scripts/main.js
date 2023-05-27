@@ -66,14 +66,8 @@ const loginFormHandler = () => {
     const elementPrefix = "login";
     const eventType = "submit";
     const onSuccessFn = () => {
-        const loginElement = document.querySelector('.nav-login');
-        const logoutElements = document.querySelectorAll('.nav-logout');
-        const emailValue = document.getElementById('login_email').value;
-        const userEmail = document.getElementById('user-email');
-        userEmail.innerText = emailValue;
+        loginFn();
         loginFormHideToggle();
-        loginElement.style.display = 'none';
-        logoutElements.forEach(element => element.style.display = 'block');
         console.log('[FORM VALIDATOR OK!] Enviando al servidor...');
         setTimeout(() => {
             console.log('[FORM VALIDATOR: RESPUESTA SERVIDOR] Formulario recibido!');
@@ -114,6 +108,16 @@ const toggleLoginForm = () => {
         inputsToClean.forEach(element => renderValidationLabel(true, element));
         loginFormHideToggle();
     })
+}
+
+const loginFn = () => {
+    const loginElement = document.querySelector('.nav-login');
+    const logoutElements = document.querySelectorAll('.nav-logout');
+    const emailValue = document.getElementById('login_email').value;
+    const userEmail = document.getElementById('user-email');
+    userEmail.innerText = emailValue;
+    loginElement.style.display = 'none';
+    logoutElements.forEach(element => element.style.display = 'block');
 }
 
 const logoutFn = () => {
